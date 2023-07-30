@@ -1,0 +1,95 @@
+@import "Theme";
+.Navigation-Bar {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  height: 10vh;
+  width: 100vw;
+
+  border-top: 3px solid var(--color-text-secondary);
+  border-bottom: 3px solid var(--color-text-secondary);
+}
+.Left {
+  background-color: transparent;
+
+  height: 5vh;
+  width: 10vw;
+
+  font-size: 4vh;
+  font-weight: 500;
+  text-transform: lowercase;
+  margin-left: 1vw;
+}
+.Style-Link {
+  color: var(--color-text-secondary);
+  &:hover {
+    color: var(--color-text-tertiary);
+  }
+}
+.Right {
+  background-color: transparent;
+
+  height: 5vh;
+  width: auto;
+
+  font-size: 4vh;
+  font-weight: 300;
+}
+.Shopping-Cart {
+  background-color: transparent;
+  position: relative;
+}
+
+.Shopping-Counter {
+  background-color: var(--color-background-secondary);
+  border-radius: 25%;
+
+  position: absolute;
+  bottom: 0%;
+  left: 65%;
+
+  font-size: 15px;
+}
+.custom-Dialog-Box {
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: -25%;
+
+    width: auto;
+
+    background-color: var(--color-text-primary);
+    color: var(--color-background-primary);
+
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    border-radius: 0.2rem;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+.H {
+  &::after {
+    content: "Cart";
+  }
+}
+.C {
+  &::after {
+    content: "Cart";
+  }
+}
+.LI {
+  &::after {
+    content: "Login";
+  }
+}
+.LO {
+  &::after {
+    content: "LogOut";
+  }
+}

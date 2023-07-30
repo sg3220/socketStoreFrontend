@@ -1,0 +1,48 @@
+@import "Theme";
+
+.Home {
+  padding: 50px;
+}
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 3px solid var(--color-text-secondary);
+}
+.Product {
+  background-color: var(--color-background-secondary);
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 10px;
+  margin: 10px;
+  height: 32.5vh;
+  width: 20vw;
+  border-radius: 10px;
+  border: 3px solid var(--color-text-secondary);
+  transition: all 0.25s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.cartButton {
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  border-radius: 10px;
+  border: 3px solid var(--color-text-secondary);
+  padding: 2.5px 5px;
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: var(--color-background-primary);
+    transform: scale(1.05);
+    box-shadow: 1px 0 2px 0 var(--color-text-secondary);
+    font-weight: 500;
+  }
+}
+.Button-Array {
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+}

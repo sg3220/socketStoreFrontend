@@ -1,0 +1,18 @@
+@import "Theme";
+.Heading-Primary {
+  background-color: var(--color-background-primary);
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 2.5px 5px;
+}
+.Heading-Secondary {
+  background-color: var(--color-background-primary);
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 2.5px 5px;
+}

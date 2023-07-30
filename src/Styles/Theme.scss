@@ -1,0 +1,43 @@
+// Theme.scss
+:root {
+  --color-text-primary-light: #14213d;
+  --color-text-secondary-light: #ffffff;
+  --color-text-tertiary-light: #f48c06;
+
+  --color-background-primary-light: #cbf3f0;
+  --color-background-secondary-light: #2ec4b6;
+  --color-background-tertiary-light: #495057;
+
+  --color-text-primary-dark: #e9ecef;
+  --color-text-secondary-dark: #ced4da;
+  --color-text-tertiary-dark: #f48c06;
+
+  --color-background-primary-dark: #212529;
+  --color-background-secondary-dark: #343a40;
+  --color-background-tertiary-dark: #495057;
+
+  --image-background-light: url("./../Assets/lightBackground.png");
+  --image-background-dark: url("./../Assets/darkBackground.png");
+}
+// Theme.scss
+.lightMode {
+  --color-text-primary: var(--color-text-primary-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+  --color-text-tertiary: var(--color-text-tertiary-light);
+  --image-background: var(--image-background-light);
+
+  --color-background-primary: var(--color-background-primary-light);
+  --color-background-secondary: var(--color-background-secondary-light);
+  --color-background-tertiary: var(--color-background-tertiary-light);
+}
+
+.darkMode {
+  --color-text-primary: var(--color-text-primary-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+  --color-text-tertiary: var(--color-text-tertiary-dark);
+  --image-background: var(--image-background-dark);
+
+  --color-background-primary: var(--color-background-primary-dark);
+  --color-background-secondary: var(--color-background-secondary-dark);
+  --color-background-tertiary: var(--color-background-tertiary-dark);
+}

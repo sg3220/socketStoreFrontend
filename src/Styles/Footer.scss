@@ -1,0 +1,12 @@
+@import "Theme";
+
+.Footer {
+  font-size: 15px;
+
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  font-family: "IBM Plex Mono";
+  padding: 5px;
+
+  text-align: center;
+}
