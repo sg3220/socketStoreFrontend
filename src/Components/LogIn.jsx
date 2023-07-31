@@ -1,14 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { Context, serverBackend } from "..";
+
+import { Context, serverBackend } from "../index";
+
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
 const LogIn = () => {
-  const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
-    useContext(Context);
   const [vEmail, setvEmail] = useState("");
   const [vPassword, setvPassword] = useState("");
+  const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
+    useContext(Context);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -34,6 +37,7 @@ const LogIn = () => {
       toast.error("Error");
       console.log(error);
       setIsAuthenticated(false);
+      setLoading(false);
     }
   };
 
@@ -73,7 +77,7 @@ const LogIn = () => {
             <button
               className={`Form-Element Form-Button ${
                 loading ? "disabled-cursor" : ""
-              } `}
+              }`}
               disabled={loading}
             >
               LOG IN

@@ -11,7 +11,6 @@ import PatchProduct from "./Components/PatchProduct";
 import PopUp from "./Components/PopUp";
 import SignUp from "./Components/SignUp";
 import Footer from "./Components/Footer";
-import Bittu from "./Components/Bittu";
 
 import darkModeImage from "./Assets/darkModeImage.png";
 import lightModeImage from "./Assets/lightModeImage.png";
