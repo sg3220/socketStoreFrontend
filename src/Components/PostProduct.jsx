@@ -60,7 +60,7 @@ const PostProduct = () => {
           vShelfLife,
         },
         {
-          header: {
+          headers: {
             "Content-Type": "application/json",
           },
           withCredentials: true,
