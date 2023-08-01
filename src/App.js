@@ -34,7 +34,7 @@ function App() {
     setLoading(true);
     axios
       .get(`${serverBackend}/Users/KnowMe`, {
-        withCredentials: true,
+        // withCredentials: true,
       })
       .then((res) => {
         setPresentUser(res.data.presentUser);
@@ -46,7 +46,7 @@ function App() {
         setIsAuthenticated(false);
         setLoading(false);
       });
-  });
+  }, []);
 
   return (
     <Router>
