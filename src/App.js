@@ -37,7 +37,7 @@ function App() {
         // withCredentials: true,
       })
       .then((res) => {
-        setPresentUser(res.data.presentUser);
+        setPresentUser(res.data.user);
         setIsAuthenticated(true);
         setLoading(false);
       })
