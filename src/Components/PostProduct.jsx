@@ -12,7 +12,7 @@ const PostProduct = () => {
   
   const [vPrice, setvPrice] = useState("");
   
-  const [vQuantity, setvQuantity] = useState("");
+  const [vQunatity, setvQunatity] = useState("");
   
   const [vUnit, setvUnit] = useState("");
   
@@ -35,7 +35,7 @@ const PostProduct = () => {
       vManufacturerName,
       vProductName,
       vPrice,
-      vQuantity,
+      vQunatity,
       vUnit,
       vFrontImage,
       vBackImage,
@@ -51,7 +51,7 @@ const PostProduct = () => {
           vManufacturerName,
           vProductName,
           vPrice,
-          vQuantity,
+          vQunatity,
           vUnit,
           vFrontImage,
           vBackImage,
@@ -69,7 +69,7 @@ const PostProduct = () => {
       setvManufacturerName("");
       setvProductName("");
       setvPrice("");
-      setvQuantity("");
+      setvQunatity("");
       setvUnit("");
       setvFrontImage("");
       setvBackImage("");
@@ -124,7 +124,7 @@ const PostProduct = () => {
               />
               <input
                 className="Form-Element Form-Input"
-                onChange={(e) => setvQuantity(e.target.value)}
+                onChange={(e) => setvQunatity(e.target.value)}
                 placeholder="vQuantity"
                 required
                 type="number"
