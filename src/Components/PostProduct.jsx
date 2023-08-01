@@ -63,7 +63,7 @@ const PostProduct = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          // withCredentials: true,
         }
       );
       setvManufacturerName("");
