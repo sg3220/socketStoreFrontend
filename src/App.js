@@ -37,6 +37,8 @@ function App() {
         // withCredentials: true,
       })
       .then((res) => {
+        console.log(res);
+        console.log(res.data);
         setPresentUser(res.data.user);
         setIsAuthenticated(true);
         setLoading(false);
