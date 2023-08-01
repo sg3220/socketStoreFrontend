@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${serverBackend}/Users/Me`, {
+      .get(`${serverBackend}/Users/KnowMe`, {
         withCredentials: true,
       })
       .then((res) => {
