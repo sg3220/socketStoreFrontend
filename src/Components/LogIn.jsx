@@ -1,14 +1,17 @@
+import axios from "axios";
 import React, { useContext, useState } from "react";
+import { toast } from "react-hot-toast";
 import { Link, Navigate } from "react-router-dom";
 
 import { Context, serverBackend } from "../index";
 
-import axios from "axios";
-import { toast } from "react-hot-toast";
 
 const LogIn = () => {
+
   const [vEmail, setvEmail] = useState("");
+
   const [vPassword, setvPassword] = useState("");
+
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
     useContext(Context);
 
@@ -30,6 +33,8 @@ const LogIn = () => {
           withCredentials: true,
         }
       );
+      setvEmail("");
+      setvPassword("");
       toast.success(data.vStatus);
       setIsAuthenticated(true);
       setLoading(false);
@@ -44,6 +49,7 @@ const LogIn = () => {
   if (isAuthenticated) {
     return <Navigate to={"/"} />;
   }
+  
   return (
     <div className="U-Display-Column U-Center-Center Cover">
       <div className="Outer-Box">

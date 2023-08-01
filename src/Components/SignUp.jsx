@@ -1,16 +1,19 @@
+import axios from "axios";
 import React, { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, Navigate } from "react-router-dom";
 
 import { Context, serverBackend } from "../index";
 
-import axios from "axios";
-import toast from "react-hot-toast";
-
 const SignUp = () => {
   const [vName, setvName] = useState("");
+
   const [vEmail, setvEmail] = useState("");
+
   const [vPassword, setvPassword] = useState("");
+
   const [vPasswordConfirm, setvPasswordConfirm] = useState("");
+  
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
     useContext(Context);
 
@@ -34,6 +37,11 @@ const SignUp = () => {
           withCredentials: true,
         }
       );
+      setvName("");
+      setvEmail("");
+      setvPassword("");
+      setvPasswordConfirm("");
+
       toast.success(data.vStatus);
       setIsAuthenticated(true);
       setLoading(false);

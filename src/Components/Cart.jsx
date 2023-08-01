@@ -6,7 +6,18 @@ const Cart = () => {
   const { cartItems, subTotal, tax, shipping, total } = useSelector(
     (state) => state.cart
   );
+
   const dispatch = useDispatch();
+
+  const decrement = (id) => {
+    dispatch({
+      type: "decrement",
+      payload: id,
+    });
+    dispatch({
+      type: "calculatePrice",
+    });
+  };
 
   const increment = (id) => {
     dispatch({
@@ -17,15 +28,7 @@ const Cart = () => {
       type: "calculatePrice",
     });
   };
-  const decrement = (id) => {
-    dispatch({
-      type: "decrement",
-      payload: id,
-    });
-    dispatch({
-      type: "calculatePrice",
-    });
-  };
+
   const deleteHandler = (id) => {
     dispatch({
       type: "deleteFromCart",
@@ -35,6 +38,7 @@ const Cart = () => {
       type: "calculatePrice",
     });
   };
+
   return (
     <div className="Cover">
       <div className="Cart U-Display-Row">
@@ -71,6 +75,7 @@ const Cart = () => {
     </div>
   );
 };
+
 const CartItem = ({
   vProductImage,
   vProductName,

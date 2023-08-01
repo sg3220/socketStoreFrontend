@@ -1,59 +1,30 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { useDispatch } from "react-redux";
-import { serverBackend } from "../index.js";
-import image01 from "./../Assets/image01.jpg";
 import { Link } from "react-router-dom";
-import image02 from "./../Assets/image02.jpeg";
+import { useDispatch } from "react-redux";
+
+import { serverBackend } from "../index.js";
+
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const productList = [
-    {
-      vProductName: "Cookies Heaven Atta",
-      vPrice: 70,
-      vProductImage: image01,
-      id: "64c23b33ac02c2340caebfdd",
-    },
-    {
-      vProductName: "Cookies Heaven Atta",
-      vPrice: 70,
-      vProductImage: image01,
-      id: "64c23b33ac02c2340caebfde",
-    },
-    {
-      vProductName: "Cookies Heaven Atta",
-      vPrice: 70,
-      vProductImage: image01,
-      id: "64c23b33ac02c2340caebfdf",
-    },
-    {
-      vProductName: "Cookies Heaven Atta",
-      vPrice: 70,
-      vProductImage: image01,
-      id: "64c23b33ac02c2340caebfdg",
-    },
-    {
-      vProductName: "Pasteurized Butter",
-      vPrice: 56,
-      vProductImage: image02,
-      id: "64c2956ea5f21004054ecf79",
-    },
-    {
-      vProductName: "Pasteurized Butter",
-      vPrice: 56,
-      vProductImage: image02,
-      id: "64c2956ea5f21004054ecf70",
-    },
-    {
-      vProductName: "Pasteurized Butter",
-      vPrice: 56,
-      vProductImage: image02,
-      id: "64c2956ea5f21004054ecf71",
-    },
-  ];
+  const [vProducts, setvProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${serverBackend}/Products`, {
+        // withCredentials: true,
+      })
+      .then((res) => {
+        // console.log(res.data);
+        setvProducts(res.data.products);
+      })
+      .catch((e) => {
+        toast.error(e.response.data.message);
+      });
+  });
 
   const dispatch = useDispatch();
+
   const addToCartHandler = (options) => {
     dispatch({ type: "addToCart", payload: options });
     dispatch({
@@ -61,16 +32,17 @@ const Home = () => {
     });
     toast.success("Added To Cart");
   };
+
   return (
     <div className="Cover">
       <div className="Home U-Display-Row U-Center-spaceEvenly">
-        {productList.map((i) => (
+        {vProducts.map((i) => (
           <ProductCard
-            key={i.id}
+            key={i._id}
             vProductName={i.vProductName}
             vPrice={i.vPrice}
             vProductImage={i.vProductImage}
-            id={i.id}
+            id={i._id}
             handler={addToCartHandler}
           />
         ))}
@@ -93,11 +65,15 @@ const ProductCard = ({ id, vProductName, vPrice, vProductImage, handler }) => (
           handler({ id, vProductImage, vProductName, vPrice, quantity: 1 })
         }
       >
-        Add To Cart
+        ADD
       </button>
       <button className="cartButton" style={{ marginRight: "10px" }}>
-        <Link className="Style-Link" style={{ color: "inherit" }} to={"/PopUp"}>
-          More Details
+        <Link
+          className="Style-Link"
+          style={{ color: "inherit" }}
+          to={`/DetailedProduct/${id}`}
+        >
+          MORE-DETAILS
         </Link>
       </button>
     </div>

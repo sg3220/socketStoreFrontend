@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { FiShoppingBag } from "react-icons/fi";
-import { BiHomeAlt2, BiLogIn, BiLogOut } from "react-icons/bi";
-
-import "./../Styles/Utilities.scss";
-import "./../Styles/Header.scss";
-import { useSelector } from "react-redux";
-import { Context, serverBackend } from "..";
-import { toast } from "react-hot-toast";
 import axios from "axios";
+import React, { useContext } from "react";
+import { BiHomeAlt2, BiLogIn, BiLogOut } from "react-icons/bi";
+import { FiShoppingBag } from "react-icons/fi";
+import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import { Context, serverBackend } from "../index";
+import "./../Styles/Header.scss";
+import "./../Styles/Utilities.scss";
+
 const Header = () => {
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
     useContext(Context);
@@ -29,9 +30,8 @@ const Header = () => {
     }
   };
 
-  console.log("In Hedaer.jsx" + isAuthenticated);
-  // console.log(isAuthenticated, setIsAuthenticated);
   const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <nav className="Navigation-Bar U-Display-Row U-Center-spaceBetween">
       <div
