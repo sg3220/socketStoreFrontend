@@ -30,13 +30,14 @@ function App() {
   const { setPresentUser, setIsAuthenticated, setLoading } =
     useContext(Context);
 
-  useEffect(() => {
-    setLoading(true);
-    axios
+    useEffect(() => {
+      setLoading(true);
+      axios
       .get(`${serverBackend}/Users/KnowMe`, {
-        // withCredentials: true,
+        withCredentials: true,
       })
       .then((res) => {
+        console.log(res)
         console.log(res);
         console.log(res.data);
         setPresentUser(res.data.user);
