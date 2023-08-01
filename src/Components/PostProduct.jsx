@@ -118,9 +118,9 @@ const PostProduct = () => {
               <input
                 className="Form-Element Form-Input"
                 onChange={(e) => setvPrice(e.target.value)}
+                placeholder="vPrice"
                 required
                 type="number"
-                placeholder="vPrice"
               />
               <input
                 className="Form-Element Form-Input"
@@ -140,15 +140,15 @@ const PostProduct = () => {
               <input
                 className="Form-Element Form-Input"
                 onChange={(e) => setvFrontImage(e.target.value)}
-                placeholder="vUnit(default: g)"
+                placeholder="vFrontImage(default: g)"
                 required
-                type="url"
+                type="text"
               />
               <input
                 className="Form-Element Form-Input"
                 onChange={(e) => setvBackImage(e.target.value)}
-                placeholder="vUnit(default: g)"
-                type="url"
+                placeholder="vBackImage(default: g)"
+                type="text"
               />
               <input
                 className="Form-Element Form-Input"
