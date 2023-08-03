@@ -98,7 +98,7 @@ const CartItem = ({
         style={{ borderRadius: "0", transition: "none" }}
         onClick={() => decrement(id)}
       >
-        -
+        ➖
       </button>
       <div className="Control-Button">{qty}</div>
       <button
@@ -106,7 +106,7 @@ const CartItem = ({
         style={{ borderRadius: "0", transition: "none" }}
         onClick={() => increment(id)}
       >
-        +
+        ➕
       </button>
     </div>
     <AiFillDelete className="Dustbin" onClick={() => deleteHandler(id)} />
