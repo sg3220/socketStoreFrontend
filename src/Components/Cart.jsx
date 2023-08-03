@@ -46,7 +46,7 @@ const Cart = () => {
           {cartItems.length > 0 ? (
             cartItems.map((i) => (
               <CartItem
-                vProductImage={i.vProductImage}
+                vFrontImage={i.vFrontImage}
                 vProductName={i.vProductName}
                 vPrice={i.vPrice}
                 qty={i.quantity}
