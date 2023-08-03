@@ -41,7 +41,7 @@ const Home = () => {
             key={i._id}
             vProductName={i.vProductName}
             vPrice={i.vPrice}
-            vProductImage={i.vProductImage}
+            vFrontImage={i.vFrontImage}
             id={i._id}
             handler={addToCartHandler}
           />
@@ -51,10 +51,10 @@ const Home = () => {
   );
 };
 
-const ProductCard = ({ id, vProductName, vPrice, vProductImage, handler }) => (
+const ProductCard = ({ id, vProductName, vPrice, vFrontImage, handler }) => (
   <div className="Product U-Display-Column">
     <div>
-      <img src={vProductImage} alt={vProductName} />
+      <img src={vFrontImage} alt={vProductName} />
     </div>
     <div className="Heading-Primary">{vProductName}</div>
     <div className="Heading-Secondary">₹{vPrice}</div>
@@ -62,7 +62,7 @@ const ProductCard = ({ id, vProductName, vPrice, vProductImage, handler }) => (
       <button
         className="cartButton"
         onClick={() =>
-          handler({ id, vProductImage, vProductName, vPrice, quantity: 1 })
+          handler({ id, vFrontImage, vProductName, vPrice, quantity: 1 })
         }
       >
         ADD
