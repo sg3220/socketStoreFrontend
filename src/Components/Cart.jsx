@@ -77,7 +77,7 @@ const Cart = () => {
 };
 
 const CartItem = ({
-  vProductImage,
+  vFrontImage,
   vProductName,
   vPrice,
   qty,
@@ -87,7 +87,7 @@ const CartItem = ({
   id,
 }) => (
   <div className="cartItem U-Display-Row">
-    <img src={vProductImage} alt={vProductName} />
+    <img src={vFrontImage} alt={vProductName} />
     <article>
       <div style={{ fontWeight: "500" }}>{vProductName}</div>
       <div style={{ fontWeight: "500" }}>₹{vPrice}</div>
