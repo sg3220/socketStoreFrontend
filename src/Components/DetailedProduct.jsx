@@ -144,7 +144,7 @@ const ProductCard = ({
         >
           Seller Name: {vSellerName}, Country Of Origin:
           {vCountryOfOrigin}, The Shelf Life Of The Product Is: {vShelfLife}{" "}
-          Days, From The Date Of Manufacture/Packed By.
+          Day(s), From The Date Of Manufacture/Packed By.
         </div>
 
         <button
