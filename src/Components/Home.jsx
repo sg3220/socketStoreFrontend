@@ -73,7 +73,7 @@ const ProductCard = ({ id, vProductName, vPrice, vFrontImage, handler }) => (
           style={{ color: "inherit" }}
           to={`/DetailedProduct/${id}`}
         >
-          MORE-DETAILS
+          MORE DETAILS
         </Link>
       </button>
     </div>
