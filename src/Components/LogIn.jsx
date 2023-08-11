@@ -5,9 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 
 import { Context, serverBackend } from "../index";
 
-
 const LogIn = () => {
-
   const [vEmail, setvEmail] = useState("");
 
   const [vPassword, setvPassword] = useState("");
@@ -47,9 +45,9 @@ const LogIn = () => {
   };
 
   if (isAuthenticated) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/Home"} />;
   }
-  
+
   return (
     <div className="U-Display-Column U-Center-Center Cover">
       <div className="Outer-Box">

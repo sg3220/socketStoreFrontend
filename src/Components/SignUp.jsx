@@ -13,7 +13,7 @@ const SignUp = () => {
   const [vPassword, setvPassword] = useState("");
 
   const [vPasswordConfirm, setvPasswordConfirm] = useState("");
-  
+
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
     useContext(Context);
 
@@ -53,7 +53,7 @@ const SignUp = () => {
     }
   };
   if (isAuthenticated) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/Home"} />;
   }
   return (
     <div className="U-Display-Column U-Center-Center Cover">

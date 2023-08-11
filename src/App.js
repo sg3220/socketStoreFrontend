@@ -63,8 +63,9 @@ function App() {
         </button>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/LogIn" element={<LogIn />} />
+          <Route path="/" element={<LogIn />} />
+          <Route path="/Home" element={<Home />} />
+          {/* <Route path="/LogIn" element={<LogIn />} /> */}
           <Route path="/Cart" element={<Cart />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/PostProduct" element={<PostProduct />} />
