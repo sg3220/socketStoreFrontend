@@ -63,7 +63,7 @@ function App() {
         </button>
         <Header />
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/SignUp" element={<SignUp />} />
