@@ -30,14 +30,14 @@ function App() {
   const { setPresentUser, setIsAuthenticated, setLoading } =
     useContext(Context);
 
-    useEffect(() => {
-      setLoading(true);
-      axios
+  useEffect(() => {
+    setLoading(true);
+    axios
       .get(`${serverBackend}/Users/KnowMe`, {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res)
+        console.log(res);
         console.log(res);
         console.log(res.data);
         setPresentUser(res.data.user);
@@ -63,9 +63,9 @@ function App() {
         </button>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Cart" element={<Cart />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/LogIn" element={<LogIn />} />
+          <Route path="/Cart" element={<Cart />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/PostProduct" element={<PostProduct />} />
           <Route path="/PatchProduct" element={<PatchProduct />} />
