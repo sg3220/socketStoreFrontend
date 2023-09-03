@@ -22,6 +22,11 @@
     font-weight: 500;
     margin-left: 50px;
   }
+  @include respond(Smartphone) {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+  }
 
   background-color: transparent;
   text-transform: lowercase;
@@ -35,6 +40,10 @@
   @include respond(Desktop) {
     font-size: 40px;
     margin-right: 10px;
+  }
+  @include respond(Smartphone) {
+    font-size: 20px;
+    margin-right: 5px;
   }
 
   background-color: transparent;
