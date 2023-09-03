@@ -12,17 +12,10 @@ img {
     height: 100px;
     width: 100px;
   }
-  @include respond(Tablet-Landscape) {
-    height: 100px;
-    width: 100px;
-  }
-  @include respond(Tablet-Portrait) {
-    height: 100px;
-    width: 100px;
-  }
+
   @include respond(Smartphone) {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
   }
   border-radius: 10px;
   border: 3px solid var(--color-text-secondary);
@@ -33,6 +26,10 @@ img {
   @include respond(Desktop) {
     height: 250px;
     width: 250px;
+  }
+  @include respond(Smartphone) {
+    height: 200px;
+    width: 200px;
   }
 
   background-color: var(--color-background-secondary);

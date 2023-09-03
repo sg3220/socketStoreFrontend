@@ -52,7 +52,7 @@ const ProductCard = ({ id, vProductName, vPrice, vFrontImage, handler }) => (
       <img src={vFrontImage} alt={vProductName} />
     </div>
     <div className="Heading-Primary">{vProductName}</div>
-    <div className="Heading-Secondary">₹{vPrice}</div>
+    <div className="Heading-Primary">₹{vPrice}</div>
     <div className="U-Display-Row Button-Array">
       <button
         className="cartButton"

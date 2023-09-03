@@ -12,6 +12,10 @@
     font-size: 20px;
     font-weight: 500;
   }
+  @include respond(Smartphone) {
+    font-size: 15px;
+    font-weight: 500;
+  }
 
   border-radius: 10px;
   padding: 2.5px 5px;
@@ -26,6 +30,10 @@
   font-weight: 300;
   @include respond(Desktop) {
     font-size: 15px;
+    font-weight: 300;
+  }
+  @include respond(Desktop) {
+    font-size: 7.5px;
     font-weight: 300;
   }
 
