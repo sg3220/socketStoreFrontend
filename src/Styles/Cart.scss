@@ -1,12 +1,18 @@
 @import "Theme";
+@import "Mixins";
 .Cart {
-  height: 80vh;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 .Main-Box {
   height: 75%;
-  width: 70%;
+  width: 50%;
 
   background-color: var(--color-background-secondary);
 
@@ -27,8 +33,12 @@
 }
 
 .cartItem {
+  height: auto;
   width: 90%;
 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 
@@ -41,16 +51,19 @@
   border-radius: 10px;
 }
 .Side-Box {
-  background-color: var(--color-background-secondary);
-  border-left: 10px;
-  border-top-left-radius: 75px;
-  border-bottom-left-radius: 75px;
-  border: 3px solid var(--color-text-secondary);
-  border-right: none;
   height: 55%;
   width: auto;
-  padding: 10px;
+
   justify-content: center;
+
+  border-bottom-left-radius: 75px;
+  border-top-left-radius: 75px;
+
+  border: 3px solid var(--color-text-secondary);
+  border-right: none;
+
+  background-color: var(--color-background-secondary);
+  padding: 10px;
 }
 .Bill-Box {
   margin: 5px;

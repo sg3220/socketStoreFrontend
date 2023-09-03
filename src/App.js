@@ -11,6 +11,7 @@ import Home from "./Components/Home";
 import LogIn from "./Components/LogIn";
 import PatchProduct from "./Components/PatchProduct";
 import PostProduct from "./Components/PostProduct";
+import Loader from "./Components/Loader";
 import SignUp from "./Components/SignUp";
 
 import Footer from "./Components/Footer";
@@ -63,10 +64,10 @@ function App() {
         </button>
         <Header />
         <Routes>
-          <Route path="/" element={<LogIn />} />
           <Route path="/Home" element={<Home />} />
-          {/* <Route path="/LogIn" element={<LogIn />} /> */}
+          <Route path="/LogIn" element={<LogIn />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Loader" element={<Loader />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/PostProduct" element={<PostProduct />} />
           <Route path="/PatchProduct" element={<PatchProduct />} />

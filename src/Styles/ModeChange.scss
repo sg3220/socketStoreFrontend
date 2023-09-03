@@ -1,12 +1,17 @@
 .modeChangerButton {
-  //--> Remove Default Styles
+  height: 35px;
+  width: 35px;
+
   background-color: transparent;
   border: none;
 
-  height: 40px;
-  width: 40px;
+  position: absolute;
+  top: 2%;
+  left: 0.5%;
 }
 .modeChangerImage {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
+
+  border: none;
 }

@@ -11,11 +11,8 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get(`${serverBackend}/Products`, {
-        // withCredentials: true,
-      })
+      .get(`${serverBackend}/Products`, {})
       .then((res) => {
-        // console.log(res.data);
         setvProducts(res.data.products);
       })
       .catch((e) => {
@@ -35,18 +32,16 @@ const Home = () => {
 
   return (
     <div className="Cover">
-      <div className="Home U-Display-Row U-Center-spaceEvenly">
-        {vProducts.map((i) => (
-          <ProductCard
-            key={i._id}
-            vProductName={i.vProductName}
-            vPrice={i.vPrice}
-            vFrontImage={i.vFrontImage}
-            id={i._id}
-            handler={addToCartHandler}
-          />
-        ))}
-      </div>
+      {vProducts.map((i) => (
+        <ProductCard
+          key={i._id}
+          vProductName={i.vProductName}
+          vPrice={i.vPrice}
+          vFrontImage={i.vFrontImage}
+          id={i._id}
+          handler={addToCartHandler}
+        />
+      ))}
     </div>
   );
 };

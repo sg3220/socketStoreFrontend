@@ -63,14 +63,6 @@
     color: var(--color-text-secondary);
   }
 }
-.Cover {
-  height: 76.5vh;
-  width: 100vw;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 .Outer-Box-Select {
   padding-left: 10px;
 }

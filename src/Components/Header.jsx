@@ -38,13 +38,13 @@ const Header = () => {
         className="Left U-Display-Row U-Center-Center"
         style={{ fontFamily: "IBM Plex Mono, monospace" }}
       >
-        socket()
+        grocet()
       </div>
       <div className="Right U-Display-Row U-Center-spaceEvenly">
         <div>
           <Link
             className="Style-Link"
-            to={"/"}
+            to={"/Home"}
             style={{
               textDecoration: "none",
               padding: "0 15px",

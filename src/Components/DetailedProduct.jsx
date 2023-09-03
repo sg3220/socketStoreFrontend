@@ -72,8 +72,8 @@ const ProductCard = ({
   vCountryOfOrigin,
   handler,
 }) => (
-  <div className="U-Display-Row U-Center-Center">
-    <div className="U-Display-Row U-Center-Center PopUp">
+  <div className="detailedProduct">
+    <div className="PopUp">
       <div style={{ height: "350px", width: "350px" }}>
         <Carousel
           showArrows={true}
@@ -99,7 +99,12 @@ const ProductCard = ({
 
       <div
         className="Product U-Display-Column"
-        style={{ height: "auto", padding: "20px", border: "none" }}
+        style={{
+          width: "350px",
+          height: "auto",
+          padding: "20px",
+          border: "none",
+        }}
       >
         <div
           className="Heading-Primary"

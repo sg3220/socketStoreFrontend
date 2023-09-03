@@ -1,23 +1,43 @@
 @import "Theme";
+@import "Mixins";
 .Navigation-Bar {
+  height: 75px;
+  width: 100%;
+
   background-color: var(--color-background-secondary);
   color: var(--color-text-secondary);
-  height: 10vh;
-  width: 100vw;
 
-  border-top: 3px solid var(--color-text-secondary);
   border-bottom: 3px solid var(--color-text-secondary);
+  border-top: 3px solid var(--color-text-secondary);
 }
 .Left {
-  background-color: transparent;
+  height: 50px;
+  width: auto;
 
-  height: 5vh;
-  width: 10vw;
-
-  font-size: 4vh;
+  font-size: 40px;
   font-weight: 500;
+  margin-left: 50px;
+  @include respond(Desktop) {
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 50px;
+  }
+
+  background-color: transparent;
   text-transform: lowercase;
-  margin-left: 1vw;
+}
+.Right {
+  height: 50px;
+  width: auto;
+
+  font-size: 40px;
+  margin-right: 10px;
+  @include respond(Desktop) {
+    font-size: 40px;
+    margin-right: 10px;
+  }
+
+  background-color: transparent;
 }
 .Style-Link {
   color: var(--color-text-secondary);
@@ -25,20 +45,10 @@
     color: var(--color-text-tertiary);
   }
 }
-.Right {
-  background-color: transparent;
-
-  height: 5vh;
-  width: auto;
-
-  font-size: 4vh;
-  font-weight: 300;
-}
 .Shopping-Cart {
   background-color: transparent;
   position: relative;
 }
-
 .Shopping-Counter {
   background-color: var(--color-background-secondary);
   border-radius: 25%;

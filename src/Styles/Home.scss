@@ -1,22 +1,47 @@
 @import "Theme";
+@import "Mixins";
 
 .Home {
-  padding: 50px;
+  // padding: 50px;
+  background-color: transparent;
 }
 img {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+  @include respond(Desktop) {
+    height: 100px;
+    width: 100px;
+  }
+  @include respond(Tablet-Landscape) {
+    height: 100px;
+    width: 100px;
+  }
+  @include respond(Tablet-Portrait) {
+    height: 100px;
+    width: 100px;
+  }
+  @include respond(Smartphone) {
+    height: 100px;
+    width: 100px;
+  }
   border-radius: 10px;
   border: 3px solid var(--color-text-secondary);
 }
 .Product {
+  height: 250px;
+  width: 250px;
+  @include respond(Desktop) {
+    height: 250px;
+    width: 250px;
+  }
+
   background-color: var(--color-background-secondary);
+
   align-items: flex-start;
   justify-content: space-evenly;
-  padding-left: 10px;
+
   margin: 10px;
-  height: 32.5vh;
-  width: 20vw;
+  padding-left: 10px;
   border-radius: 10px;
   border: 3px solid var(--color-text-secondary);
   transition: all 0.25s;
@@ -24,6 +49,7 @@ img {
     transform: scale(1.05);
   }
 }
+
 .cartButton {
   cursor: pointer;
   border: none;
@@ -45,4 +71,17 @@ img {
   justify-content: space-between;
   background-color: transparent;
   width: 100%;
+}
+.Cover {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow-y: scroll;
 }
