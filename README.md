@@ -30,89 +30,89 @@ Hello, Welcome To The Official Documentation Of My Socket-Grocey-Store.
 
 <BR>
 
-> **# LogIn An Existing User:** 
-> **POST:** `API/V1/Users/LogIn`
->JSON To Be Send:
->`{`
-	`"vEmail":"sg@gmail.com",`
-	`"vPassword":"old-235-Password",`
-`}`
+> **# LogIn An Existing User:** <BR>
+> **POST:** `API/V1/Users/LogIn` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vEmail":"sg@gmail.com",` <BR>
+	`"vPassword":"old-235-Password",` <BR>
+`}` <BR>
 
 <BR>
 
-> **# LogOut A User:** 
->**GET:** `API/V1/Users/LogOut`
+> **# LogOut A User:** <BR>
+>**GET:** `API/V1/Users/LogOut` <BR>
 
 <BR>
 
-> **# Forgot Password:** 
-> **POST:** `API/V1/Users/ForgotPassword`
->JSON To Be Send:
->`{`
-	`"vEmail":"sg@gmail.com",`
-  `}`
+> **# Forgot Password:** <BR>
+> **POST:** `API/V1/Users/ForgotPassword` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vEmail":"sg@gmail.com",` <BR>
+  `}` <BR>
 
 <BR>
 
-> **# Reset Password:** 
-> **PATCH:** `API/V1/Users/UpdatePassword/{resetPasswordToken}`
->JSON To Be Send:
->`{`
-	`"vPassword":"new-235-Password",`
-	`"vPasswordConfirm":"new-235-Password",`
-  `}`
+> **# Reset Password:** <BR>
+> **PATCH:** `API/V1/Users/UpdatePassword/{resetPasswordToken}` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vPassword":"new-235-Password",` <BR>
+	`"vPasswordConfirm":"new-235-Password",` <BR>
+  `}` <BR>
 
 <BR>
 
-> **# Update Password:** 
-> **PATCH:** `API/V1/Users/UpdatePassword`
->JSON To Be Send:
->`{`
-	`"vCurrentPassword":"old-235-Password",`
-	`"vNewPassword":"new-235-Password",`
-	`"vNewPasswordConfirm":"new-235-Password",`
-  `}`
+> **# Update Password:** <BR>
+> **PATCH:** `API/V1/Users/UpdatePassword` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vCurrentPassword":"old-235-Password",` <BR>
+	`"vNewPassword":"new-235-Password",` <BR>
+	`"vNewPasswordConfirm":"new-235-Password",` <BR>
+  `}` <BR>
   
 <BR>
 
-### Product Routes:
+### Product Routes: <BR>
 
-> **# See All Products:**
->**GET:** `API/V1/Products`
-
-<BR>
-
-> **# See One Product:** 
-> **GET:** `API/V1/Products/{productID}`
+> **# See All Products:** <BR>
+>**GET:** `API/V1/Products`<BR>
 
 <BR>
 
-> **# Delete One Product:** 
-> **DEL:** `API/V1/Products/{productID}`
+> **# See One Product:** <BR>
+> **GET:** `API/V1/Products/{productID}`<BR>
 
 <BR>
 
-> **# Add One Product:** 
-> **POST:** `API/V1/Products/PostProduct`
->JSON To Be Send:
->	`{`
-	`"vManufacturerName":"Amul",`
-	`"vProductName":"Cheese",`
-	`"vPrice":132,`
-	`"vQunatity":200,`
-	`"vUnit":"g",`
-	`"vFrontImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370027	9/Amul-Pure-Milk-Cheese-Slices-01_ixonuk.avif",`
-	`"vBackImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370028	2/Amul-Pure-Milk-Cheese-Slices-02_c50wi3.avif",`
-	`"vSellerName":  "Ghosh Retails Private Limited",`
-	`"vCountryOfOrigin":"India",`
-	`"vShelfLife":180`
-	`}`
+> **# Delete One Product:** <BR>
+> **DEL:** `API/V1/Products/{productID}` <BR>
 
 <BR>
 
-> **# Update Product:** 
-> **PATCH:** `API/V1/Users/Product/{productID}`
->JSON To Be Send:
->`{`
-	`"vUnit":"mL",`
-   `}`
+> **# Add One Product:** <BR>
+> **POST:** `API/V1/Products/PostProduct` <BR>
+>JSON To Be Send: <BR>
+>	`{` <BR>
+	`"vManufacturerName":"Amul",` <BR>
+	`"vProductName":"Cheese",` <BR>
+	`"vPrice":132,` <BR>
+	`"vQunatity":200,` <BR>
+	`"vUnit":"g",` <BR>
+	`"vFrontImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370027	9/Amul-Pure-Milk-Cheese-Slices-01_ixonuk.avif",` <BR>
+	`"vBackImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370028	2/Amul-Pure-Milk-Cheese-Slices-02_c50wi3.avif",` <BR>
+	`"vSellerName":  "Ghosh Retails Private Limited",` <BR>
+	`"vCountryOfOrigin":"India",` <BR>
+	`"vShelfLife":180` <BR>
+	`}` <BR>
+
+<BR>
+
+> **# Update Product:** <BR>
+> **PATCH:** `API/V1/Users/Product/{productID}` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vUnit":"mL",` <BR>
+   `}` <BR>
