@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Socket-Grocery-Store
+Hello, Welcome To The Official Documentation Of My Socket-Grocey-Store.
+## Front-End
+- **Language/Library Used:** CSS(SASS)/JavaScript/ReactJS 
+- [Click To Visit](https://socket-sg3220.vercel.app/Home)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Back-End
+-  **Language/Environment/Library/Framework Used:** Javascript, NodeJS, ExpressJS
+- **Database Used:** MongoDB(NoSQL)
+- [Click To Visit Backend Server](https://socketstorebackend.onrender.com)
 
-## Available Scripts
+## REST-API
 
-In the project directory, you can run:
+### User Routes:
 
-### `npm start`
+> **# Server Status:**
+> **GET:** `/API/V1`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<BR>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **# Create A New User:**
+>**POST:** `API/V1/Users/SignUp`
+>JSON To Be Send:
+>`{`
+	`"vName":"Siddharth Ghosh",`
+	`"vEmail":"sg@gmail.com",`
+	`"vPassword":"old-235-Password",`
+	`"vPasswordConfirm":"old-235-Password;`
+`}`
 
-### `npm test`
+<BR>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> **# LogIn An Existing User:** 
+> **POST:** `API/V1/Users/LogIn`
+>JSON To Be Send:
+>`{`
+	`"vEmail":"sg@gmail.com",`
+	`"vPassword":"old-235-Password",`
+`}`
 
-### `npm run build`
+<BR>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **# LogOut A User:** 
+>**GET:** `API/V1/Users/LogOut`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<BR>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **# Forgot Password:** 
+> **POST:** `API/V1/Users/ForgotPassword`
+>JSON To Be Send:
+>`{`
+	`"vEmail":"sg@gmail.com",`
+  `}`
 
-### `npm run eject`
+<BR>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> **# Reset Password:** 
+> **PATCH:** `API/V1/Users/UpdatePassword/{resetPasswordToken}`
+>JSON To Be Send:
+>`{`
+	`"vPassword":"new-235-Password",`
+	`"vPasswordConfirm":"new-235-Password",`
+  `}`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<BR>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> **# Update Password:** 
+> **PATCH:** `API/V1/Users/UpdatePassword`
+>JSON To Be Send:
+>`{`
+	`"vCurrentPassword":"old-235-Password",`
+	`"vNewPassword":"new-235-Password",`
+	`"vNewPasswordConfirm":"new-235-Password",`
+  `}`
+  
+<BR>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Product Routes:
 
-## Learn More
+> **# See All Products:**
+>**GET:** `API/V1/Products`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<BR>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> **# See One Product:** 
+> **GET:** `API/V1/Products/{productID}`
 
-### Code Splitting
+<BR>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> **# Delete One Product:** 
+> **DEL:** `API/V1/Products/{productID}`
 
-### Analyzing the Bundle Size
+<BR>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> **# Add One Product:** 
+> **POST:** `API/V1/Products/PostProduct`
+>JSON To Be Send:
+>	`{`
+	`"vManufacturerName":"Amul",`
+	`"vProductName":"Cheese",`
+	`"vPrice":132,`
+	`"vQunatity":200,`
+	`"vUnit":"g",`
+	`"vFrontImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370027	9/Amul-Pure-Milk-Cheese-Slices-01_ixonuk.avif",`
+	`"vBackImage":  	"https://res.cloudinary.com/djywrhroe/image/upload/v169370028	2/Amul-Pure-Milk-Cheese-Slices-02_c50wi3.avif",`
+	`"vSellerName":  "Ghosh Retails Private Limited",`
+	`"vCountryOfOrigin":"India",`
+	`"vShelfLife":180`
+	`}`
 
-### Making a Progressive Web App
+<BR>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **# Update Product:** 
+> **PATCH:** `API/V1/Users/Product/{productID}`
+>JSON To Be Send:
+>`{`
+	`"vUnit":"mL",`
+   `}`
