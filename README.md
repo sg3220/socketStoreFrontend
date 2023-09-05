@@ -13,20 +13,20 @@ Hello, Welcome To The Official Documentation Of My Socket-Grocey-Store.
 
 ### User Routes:
 
-> **# Server Status:** <br>
+> **# Server Status:** <BR>
 > **GET:** `/API/V1`
 
 <BR>
 
-> **# Create A New User:**
->**POST:** `API/V1/Users/SignUp`
->JSON To Be Send:
->`{`
-	`"vName":"Siddharth Ghosh",`
-	`"vEmail":"sg@gmail.com",`
-	`"vPassword":"old-235-Password",`
-	`"vPasswordConfirm":"old-235-Password;`
-`}`
+> **# Create A New User:** <BR>
+>**POST:** `API/V1/Users/SignUp` <BR>
+>JSON To Be Send: <BR>
+>`{` <BR>
+	`"vName":"Siddharth Ghosh",` <BR>
+	`"vEmail":"sg@gmail.com",` <BR>
+	`"vPassword":"old-235-Password",` <BR>
+	`"vPasswordConfirm":"old-235-Password;` <BR>
+`}` <BR>
 
 <BR>
 
