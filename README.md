@@ -13,7 +13,7 @@ Hello, Welcome To The Official Documentation Of My Socket-Grocey-Store.
 
 ### User Routes:
 
-> **# Server Status:**
+> **# Server Status:** <br>
 > **GET:** `/API/V1`
 
 <BR>
