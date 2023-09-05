@@ -5,7 +5,7 @@ Hello, Welcome To The Official Documentation Of My Socket-Grocey-Store.
 - [Click To Visit](https://socket-sg3220.vercel.app/Home)
 
 ## Back-End
--  **Language/Environment/Library/Framework Used:** Javascript, NodeJS, ExpressJS
+-  **Language/Framework Used:** Javascript, NodeJS, ExpressJS
 - **Database Used:** MongoDB(NoSQL)
 - [Click To Visit Backend Server](https://socketstorebackend.onrender.com)
 
