@@ -7,7 +7,7 @@ import App from "./App";
 import store from "./Redux/store.js";
 import "./Styles/App.scss";
 
-export const serverBackend = "https://socketstorebackend.onrender.com/API/V1";
+export const serverBackend = "https://my-grocery-store.onrender.com/API/V1";
 
 export const Context = createContext({ Authenticated: false });
 
